@@ -1,0 +1,14 @@
+[Unit]
+Description=Banker online bot
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/Golden-Alex/
+ExecStart=/root/Golden-Alex/venv/bin/python3 /root/Golden-Alex/bot.py
+RestartSec=10
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
